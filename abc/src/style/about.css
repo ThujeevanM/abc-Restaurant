@@ -1,0 +1,95 @@
+/* .about-us {
+    padding: 50px 0;
+  }
+  
+  .about-us h2 {
+    margin-bottom: 20px;
+  }
+  
+  .about-us p {
+    margin-bottom: 20px;
+  }
+  
+  .highlights {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+  }
+  
+  .highlights div {
+    text-align: center;
+  }
+  
+  .highlights h3 {
+    font-size: 2rem;
+    margin-bottom: 5px;
+  }
+  
+  .highlights p {
+    margin: 0;
+  }
+  
+  .img-fluid {
+    max-width: 100%;
+    height: auto;
+  }
+   
+   
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  
+  .image-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+   */
+   /* styles.css */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 10px;
+  }
+  
+  .image-item {
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .image-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+  }
+  
+  .image-item img:hover {
+    transform: scale(1.05);
+    
+  }
+  .info-box {
+    border-left: 5px solid orange;
+    padding-left: 15px; /* Space between border and content */
+    display: flex; /* Use Flexbox for layout */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space out text and number */
+    margin-bottom: 20px; /* Space between boxes */
+    background-color: #f9f9f9; /* Optional: add background color */
+    padding: 10px; /* Optional: add padding for better spacing */
+  }
+  
+  .text-content {
+    flex: 1; /* Allow text content to take up available space */
+  }
+  
+  .number {
+    font-size: 2.5rem; /* Larger size for the number */
+    margin: 0; /* Remove default margin */
+    text-align: right; /* Align number to the right */
+  }
+  

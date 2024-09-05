@@ -1,0 +1,26 @@
+.navbar-custom {
+    background-color: #ffffff;
+    padding: 10px 20px;
+ position: sticky;
+  }
+  
+  .navbar-logo img {
+    height: 40px;
+    margin-right: 10px;
+  }
+  
+  .navbar-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .navbar-nav .nav-link {
+    margin-right: 15px;
+    font-size: 1rem;
+  }
+  
+  .order-online-button {
+    margin-left: 15px;
+    font-size: 1rem;
+  }
+  

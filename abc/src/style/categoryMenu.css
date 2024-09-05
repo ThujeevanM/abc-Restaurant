@@ -1,0 +1,95 @@
+/* Container styling */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    padding: 0 15px; /* Add padding to the container */
+  }
+  
+  /* Heading styling */
+  h2 {
+    margin-bottom: 20px; /* Space below the heading */
+  }
+  
+  /* Button styling */
+  /* Button styling */
+.card-button {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd; /* Border color */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for button effect */
+    width: 100%; /* Ensure full width in the column */
+    max-width: 500px; /* Increase button width slightly */
+    padding: 15px; /* Padding inside the button */
+    background-color: #fff; /* Background color */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s; /* Smooth transition */
+    position: relative; /* Ensure absolute positioning works for text */
+  }
+  
+  .card-button.active:hover {
+    background-color: #f8f9fa; /* Lighter background on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+    transform: scale(1.05); /* Slightly scale up the button */
+  }
+  
+  .card-button.disabled {
+    background-color: #e9ecef; /* Gray background for disabled state */
+    cursor: not-allowed; /* Not-allowed cursor for disabled state */
+    box-shadow: none; /* Remove shadow for disabled state */
+  }
+  
+  .card-button.disabled:hover {
+    background-color: #e9ecef; /* Ensure background doesn't change on hover */
+    transform: none; /* Ensure no scaling effect on hover */
+  }
+  
+  /* Text for not available items */
+  .not-available-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    color: #fff; /* White text color */
+    padding: 10px; /* Padding around text */
+    border-radius: 5px; /* Rounded corners for text */
+    text-align: center; /* Center text */
+    font-weight: bold; /* Bold text */
+    pointer-events: none; /* Ensure text does not block interactions */
+  }
+  
+  /* Image styling */
+  .card-button img {
+    border-radius: 8px; /* Rounded corners for image */
+    margin-right: 15px; /* Space between image and text */
+  }
+  
+  /* Container for text */
+  .text-container {
+    max-width: 350px; /* Adjust as needed */
+    text-align: left; /* Align text to the left */
+  }
+  
+  /* Description styling */
+  .description {
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Limit text to 2 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Add ellipsis for overflow text */
+  }
+  
+  /* Responsive adjustments (if needed) */
+  @media (max-width: 767.98px) {
+    .card-button {
+      flex-direction: column; /* Stack image and text vertically on small screens */
+      align-items: flex-start; /* Align items to the start */
+    }
+  
+    .card-button img {
+      margin-bottom: 15px; /* Spacing below image */
+    }
+  }
+  

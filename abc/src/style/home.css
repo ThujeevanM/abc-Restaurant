@@ -1,0 +1,7 @@
+#aa{
+overflow-x: hidden;
+overflow: hidden;
+}
+#aa img{
+    object-fit: cover;
+}

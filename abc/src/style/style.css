@@ -1,0 +1,60 @@
+.header {
+  background: url('../images/header.jpg') no-repeat center center;
+  background-size: cover;
+  padding: 100px 0;
+}
+
+.header .container {
+  max-width: 600px;
+}
+
+.header h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.header .subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.header .search-bar {
+  display: flex;
+  gap: 10px;
+}
+
+.header .form-control {
+  flex: 1;
+}
+
+.header .btn {
+  flex-shrink: 0;
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-around;
+  background-color: #f0f0f0;
+  padding: 20px;
+}
+
+.card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  text-align: center;
+  width: 400px;
+}
+
+.card-image {
+  border-radius: 100%;
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+}
+
+.price {
+  font-weight: bold;
+  color: #333;
+}
