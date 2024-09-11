@@ -10,7 +10,7 @@ const ViewOrder = () => {
   // Assuming user context provides user details
   const [orders, setOrders] = useState([]);
   const { userId } = useParams();
-  const [userDate, setUserData] = useState("");
+
   const { user } = useContext(UserContext);
   const [refresh, setRefresh] = useState(false);
   // Fetch the user's orders

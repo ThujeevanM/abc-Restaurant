@@ -28,13 +28,18 @@ const Login = () => {
         "http://localhost:4000/login/login",
         loginInfo
       );
-
+      console.log(response.data.role)
       if (response.data.status === "success") {
         // Save the token in cookies
         setCookie("token", response.data.token, { path: "/" });
         toast.success("Login successful!");
-        navigate("/");
-        // Redirect to another page or fetch user details
+       if(response.data.role=='customer'){
+        navigate('/')
+       }else if(response.data.role=='staff'){
+        navigate('/staff')
+       }else if(response.data.role=='admin'){
+        navigate('/AdminDash')
+       }
       }
     } catch (error) {
       if (error.response && error.response.data && error.response.data.msg) {
@@ -96,7 +101,7 @@ const Login = () => {
                 <p>
                   {" "}
                   Don't have an account?{" "}
-                  <a href="" onClick={() => navigate("/registration")}>
+                  <a href="" onClick={() => navigate("/register")}>
                     Sign Up
                   </a>
                 </p>

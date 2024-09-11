@@ -1,0 +1,19 @@
+/* ContactUs.css */
+.contact-card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for better visual appeal */
+    border-radius: 10px; /* Rounded corners */
+  }
+  
+  .contact-form {
+    max-width: 500px; /* Optional: limit form width */
+  }
+  
+  .map-container {
+    margin-top: 20px;
+  }
+  
+  /* Optional: Adjust margin and padding */
+  .row.mb-4 {
+    margin-bottom: 2rem; /* Space between rows */
+  }
+  

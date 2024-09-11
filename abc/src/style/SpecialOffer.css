@@ -1,0 +1,81 @@
+/* Main container */
+.special-offer-container {
+    padding: 20px;
+    height: 100vh;
+  }
+  
+  /* Offer details on the left */
+  .offer-details {
+    padding: 20px;
+  }
+  
+  .offer-details h2 {
+    font-size: 2rem;
+    color: #ff5733;
+  }
+  
+  .offer-details p {
+    font-size: 1.2rem;
+    color: #555;
+  }
+  
+  .offer-details .price {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #ff5733;
+    margin-top: 10px;
+  }
+  
+  /* Offer image on the right */
+  .offer-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  /* Dot navigation styling */
+  .dot-navigation {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #ddd;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  .dot.active {
+    background-color: #ff5733;
+  }
+  
+  /* Responsive Design for Mobile */
+  @media (max-width: 768px) {
+    .offer-details h2 {
+      font-size: 1.5rem;
+    }
+  
+    .offer-details p {
+      font-size: 1rem;
+    }
+  
+    .offer-details .price {
+      font-size: 1.2rem;
+    }
+  }
+  .scrollable-cards {
+    width: 90%;
+    white-space: nowrap;
+    overflow-x: auto; /* Horizontal scrolling */
+    overflow-y: hidden; /* No vertical scrolling */
+    height: 300px; /* Set a fixed height for scrolling */
+    border: 1px solid #ccc; /* Optional: Add a border for visual effect */
+    border-radius: 10px; /* Optional: Add rounded corners */
+    padding: 10px; /* Optional: Add padding inside the container */
+  }
+  
