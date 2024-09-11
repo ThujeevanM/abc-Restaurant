@@ -141,7 +141,7 @@ const RegistrationPage = () => {
                 <p>
                   {" "}
                   Don't have an account?{" "}
-                  <a href="" onClick={() => navigate("/")}>
+                  <a href="" onClick={() => navigate("/login")}>
                     Sign Up
                   </a>
                 </p>

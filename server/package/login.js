@@ -2,10 +2,13 @@ const express = require('express');
 const bcrypt = require ('bcryptjs');
 const jwt = require('jsonwebtoken');
 const cookieParser = require('cookie-parser');
-
+const multer = require('multer');
 const router =express.Router()
 router.use(cookieParser());
  const Db =require ('../connection/Dbconnect')
+
+
+
 
  router.post('/register', (req, res) => {
     const { email, password, firstName, lastName } = req.body;
@@ -101,7 +104,8 @@ router.post('/login', (req, res) => {
             // Respond with the token only
             res.json({
                 status: 'success',
-                token: token
+                token: token,
+                role:user.user_role
             });
         });
     });
@@ -167,6 +171,16 @@ router.get('/user-details', authenticateToken, (req, res) => {
     });
 });
 
+
+
+
+
+
+  
+
+  
+  //sample
+  
 
 
 

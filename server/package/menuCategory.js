@@ -12,7 +12,7 @@ router.get("/category", (req, res) => {
     }
     // Encode image data as Base64 if needed
     const resultsWithBase64Images = results.map((category) => ({
-      ...category,
+      ...category, 
       img: category.img
         ? `data:image/jpeg;base64,${Buffer.from(category.img).toString(
             "base64"

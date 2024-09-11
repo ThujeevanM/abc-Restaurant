@@ -168,7 +168,7 @@ console.log(searchResult)
         </div>
       ) : (
         <div className="container my-5">
-          <h2 className="text-center mb-4">Categories</h2>
+          <h2 className="text-center mb-4">Menu Categories</h2>
           <div
             className="d-flex flex-row flex-wrap justify-content-center"
             style={{ marginTop: "40px" }}

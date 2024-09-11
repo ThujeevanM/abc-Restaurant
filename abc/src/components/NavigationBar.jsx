@@ -7,9 +7,9 @@ import { UserContext } from "../components/UserContext";
 import { useNavigate } from "react-router-dom";
 
 const NavigationBar = () => {
-  const { userRole, handleLogout, loading, userId } = useContext(UserContext);
+  const { userRole, handleLogout, loading, userId ,user} = useContext(UserContext);
   const navigate = useNavigate();
-  console.log(userRole);
+  console.log(user);
 
   if (loading) return <p>Loading...</p>;
   return (
@@ -23,9 +23,10 @@ const NavigationBar = () => {
         <Nav className="me-auto mb-2 mb-lg-0">
           {userRole ? (
             <>
-              {userRole === "Admin" && (
+            
+              {userRole === "admin" && (
                 <>
-                  <Nav.Link onClick={() => navigate("/dashboard")}>
+                  <Nav.Link onClick={() => navigate("/AdminDash")}>
                     Dashboard
                   </Nav.Link>
                   <Nav.Link onClick={() => navigate("/content-management")}>
@@ -47,11 +48,11 @@ const NavigationBar = () => {
               )}
               {userRole === "staff" && (
                 <>
-                  <Nav.Link onClick={() => navigate("/")}>Dashboard</Nav.Link>
-                  <Nav.Link onClick={() => navigate("/reservations")}>
+                  <Nav.Link onClick={() => navigate("/staff")}>Dashboard</Nav.Link>
+                  <Nav.Link onClick={() => navigate("/reservationManage")}>
                     Reservations
                   </Nav.Link>
-                  <Nav.Link onClick={() => navigate("/queries")}>
+                  <Nav.Link onClick={() => navigate("/staffInquiry")}>
                     Customer Queries
                   </Nav.Link>
                   <Nav.Link onClick={() => navigate("/payments")}>
@@ -65,7 +66,7 @@ const NavigationBar = () => {
               {userRole === "customer" && (
                 <>
                   <Nav.Link onClick={() => navigate("/")}>Home</Nav.Link>
-                  <Nav.Link onClick={() => navigate("/reservation")}>
+                  <Nav.Link onClick={() => navigate(`/reservations/${userId}`)}>
                     Reservations
                   </Nav.Link>
                   <Nav.Link onClick={() => navigate("/menu")}>Menu</Nav.Link>
@@ -79,8 +80,13 @@ const NavigationBar = () => {
                     Tables
                   </Nav.Link>
                   <Nav.Link onClick={() => navigate(`/View-order/${userId}`)}>
+                    
                     View Order
                   </Nav.Link>
+                  <Nav.Link onClick={() => navigate("/specialOffer")}>
+                Special Offers
+              </Nav.Link>
+             
                 </>
               )}
             </>
@@ -90,15 +96,16 @@ const NavigationBar = () => {
               <Nav.Link onClick={() => navigate("/")}>Home</Nav.Link>
               <Nav.Link onClick={() => navigate("/menu")}>Menu</Nav.Link>
               <Nav.Link onClick={() => navigate("/about")}>About Us</Nav.Link>
-              <Nav.Link onClick={() => navigate("/contact")}>
+              <Nav.Link onClick={() => navigate("/ContactUs")}>
                 Contact Us
               </Nav.Link>
-              <Nav.Link onClick={() => navigate("/service")}>
-                Our Services
-              </Nav.Link>
-              <Nav.Link onClick={() => navigate("/special-offers")}>
+            
+              <Nav.Link onClick={() => navigate("/specialOffer")}>
                 Special Offers
               </Nav.Link>
+              <Nav.Link onClick={() => navigate("/gallery")}>
+                    Gallery
+                  </Nav.Link>
             </>
           )}
         </Nav>
@@ -108,7 +115,7 @@ const NavigationBar = () => {
               <Button
                 variant="outline-primary"
                 className="me-2"
-                onClick={() => navigate("/profile")}
+                onClick={() => navigate(`/profile/${userId}`)}
               >
                 Profile
               </Button>
